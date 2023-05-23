@@ -1,0 +1,1330 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_f88e6631f5f9c61ea941da7def205fec {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+    
+            <style>
+                #scroll_zoom_toggler_35f30062a71601d21b23be7ab8170ba7 {
+                    position:absolute;
+                    width:35px;
+                    bottom:10px;
+                    height:35px;
+                    left:10px;
+                    background-color:#fff;
+                    text-align:center;
+                    line-height:35px;
+                    vertical-align: middle;
+                    }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_f88e6631f5f9c61ea941da7def205fec" ></div>
+        
+    
+            <img id="scroll_zoom_toggler_35f30062a71601d21b23be7ab8170ba7"
+                 alt="scroll"
+                 src="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/png/512/arrow-move.png"
+                 style="z-index: 999999"
+                 onclick="map_f88e6631f5f9c61ea941da7def205fec.toggleScroll()">
+            </img>
+        
+</body>
+<script>
+    
+    
+            var map_f88e6631f5f9c61ea941da7def205fec = L.map(
+                "map_f88e6631f5f9c61ea941da7def205fec",
+                {
+                    center: [9.75478665, -4.208256800000001],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 6,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_2def9ca6968ab532da60e18fbcdf5488 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_f88e6631f5f9c61ea941da7def205fec);
+        
+    
+            map_f88e6631f5f9c61ea941da7def205fec.scrollEnabled = true;
+
+            map_f88e6631f5f9c61ea941da7def205fec.toggleScroll = function() {
+                if (this.scrollEnabled) {
+                    this.scrollEnabled = false;
+                    this.scrollWheelZoom.disable();
+                } else {
+                    this.scrollEnabled = true;
+                    this.scrollWheelZoom.enable();
+                }
+            };
+            map_f88e6631f5f9c61ea941da7def205fec.toggleScroll();
+        
+    
+            var poly_line_3f46ce97ccf50afd50384d64d4a18463 = L.polyline(
+                [[6.4550575, 3.3941795], [11.8948389, 8.5364136]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "black", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 1.0134}
+            ).addTo(map_f88e6631f5f9c61ea941da7def205fec);
+        
+    
+            poly_line_3f46ce97ccf50afd50384d64d4a18463.bindTooltip(
+                `<div>
+                     Population: 101340
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_1fe446d5d802ccf2a81b89200bace544 = L.polyline(
+                [[11.8948389, 8.5364136], [13.8001844, -10.22455481493909]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "black", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 5.14031}
+            ).addTo(map_f88e6631f5f9c61ea941da7def205fec);
+        
+    
+            poly_line_1fe446d5d802ccf2a81b89200bace544.bindTooltip(
+                `<div>
+                     Population: 514031
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_42732aab4c46587105b1479c87e0e3d1 = L.polyline(
+                [[13.8001844, -10.22455481493909], [13.8001844, -10.22455481493909]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "black", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 8.68425}
+            ).addTo(map_f88e6631f5f9c61ea941da7def205fec);
+        
+    
+            poly_line_42732aab4c46587105b1479c87e0e3d1.bindTooltip(
+                `<div>
+                     Population: 868425
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_c8d8434f6d88a5bf50637827a1a21825 = L.polyline(
+                [[13.8001844, -10.22455481493909], [12.3681873, -1.5270944]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "black", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 2.21284}
+            ).addTo(map_f88e6631f5f9c61ea941da7def205fec);
+        
+    
+            poly_line_c8d8434f6d88a5bf50637827a1a21825.bindTooltip(
+                `<div>
+                     Population: 221284
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_0464eddd65b4c76fd4f29d25aed2e377 = L.polyline(
+                [[12.3681873, -1.5270944], [13.524834, 2.109823]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "black", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 2.21284}
+            ).addTo(map_f88e6631f5f9c61ea941da7def205fec);
+        
+    
+            poly_line_0464eddd65b4c76fd4f29d25aed2e377.bindTooltip(
+                `<div>
+                     Population: 221284
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_c823eaaaf4fc1079b408e36e4ad5c847 = L.polyline(
+                [[13.524834, 2.109823], [13.524834, 2.109823]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "black", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 5.1076}
+            ).addTo(map_f88e6631f5f9c61ea941da7def205fec);
+        
+    
+            poly_line_c823eaaaf4fc1079b408e36e4ad5c847.bindTooltip(
+                `<div>
+                     Population: 510760
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_f089cbf3bd9def9f4ae1b2932c1c546d = L.polyline(
+                [[13.524834, 2.109823], [12.61326555, -7.984739136241295]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "black", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 3.15349}
+            ).addTo(map_f88e6631f5f9c61ea941da7def205fec);
+        
+    
+            poly_line_f089cbf3bd9def9f4ae1b2932c1c546d.bindTooltip(
+                `<div>
+                     Population: 315349
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_6cd7de7412a4f36be5102a82041cdc5e = L.polyline(
+                [[12.61326555, -7.984739136241295], [12.3681873, -1.5270944]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "black", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 2.21284}
+            ).addTo(map_f88e6631f5f9c61ea941da7def205fec);
+        
+    
+            poly_line_6cd7de7412a4f36be5102a82041cdc5e.bindTooltip(
+                `<div>
+                     Population: 221284
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_46de0837ec6485097c66ed53e51f7476 = L.polyline(
+                [[12.3681873, -1.5270944], [6.8200066, -5.2776034]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "black", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 2.21284}
+            ).addTo(map_f88e6631f5f9c61ea941da7def205fec);
+        
+    
+            poly_line_46de0837ec6485097c66ed53e51f7476.bindTooltip(
+                `<div>
+                     Population: 221284
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_44cba0d17aab2343c073fd26b1faa1ed = L.polyline(
+                [[6.8200066, -5.2776034], [12.885677300000001, -12.286363169419786]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "black", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 1.72528}
+            ).addTo(map_f88e6631f5f9c61ea941da7def205fec);
+        
+    
+            poly_line_44cba0d17aab2343c073fd26b1faa1ed.bindTooltip(
+                `<div>
+                     Population: 172528
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_99a6f47c32c859efc30aa849693adcd2 = L.polyline(
+                [[12.885677300000001, -12.286363169419786], [12.0755231, -12.2956935]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "black", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 1.72528}
+            ).addTo(map_f88e6631f5f9c61ea941da7def205fec);
+        
+    
+            poly_line_99a6f47c32c859efc30aa849693adcd2.bindTooltip(
+                `<div>
+                     Population: 172528
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_5a6e36551d2bfed0e721580cfb84c402 = L.polyline(
+                [[12.0755231, -12.2956935], [11.482629, -6.860785462633452]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "black", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 4.92494}
+            ).addTo(map_f88e6631f5f9c61ea941da7def205fec);
+        
+    
+            poly_line_5a6e36551d2bfed0e721580cfb84c402.bindTooltip(
+                `<div>
+                     Population: 492494
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_af97fb153a61259b5e1cedf0f1d9b60c = L.polyline(
+                [[11.482629, -6.860785462633452], [11.1757783, -4.2957591]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "black", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 4.92494}
+            ).addTo(map_f88e6631f5f9c61ea941da7def205fec);
+        
+    
+            poly_line_af97fb153a61259b5e1cedf0f1d9b60c.bindTooltip(
+                `<div>
+                     Population: 492494
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_7f9c59349a572da7a77fbf3abf270573 = L.polyline(
+                [[11.1757783, -4.2957591], [12.96030725, -2.260133043665028]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "black", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 3.68817}
+            ).addTo(map_f88e6631f5f9c61ea941da7def205fec);
+        
+    
+            poly_line_7f9c59349a572da7a77fbf3abf270573.bindTooltip(
+                `<div>
+                     Population: 368817
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_5205ee94a7b32473d66b8630d09acab0 = L.polyline(
+                [[10.7853963, -0.8487322], [13.9051631, -4.5548581]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "black", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 5.96188}
+            ).addTo(map_f88e6631f5f9c61ea941da7def205fec);
+        
+    
+            poly_line_5205ee94a7b32473d66b8630d09acab0.bindTooltip(
+                `<div>
+                     Population: 596188
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_765ac1a11229568f0da9069a1b7a3da7 = L.polyline(
+                [[13.9051631, -4.5548581], [10.6248355, -9.3175166]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "black", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 7.91243}
+            ).addTo(map_f88e6631f5f9c61ea941da7def205fec);
+        
+    
+            poly_line_765ac1a11229568f0da9069a1b7a3da7.bindTooltip(
+                `<div>
+                     Population: 791243
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_ad3a7c67787aa0824a19c07feb40f84d = L.polyline(
+                [[10.7853963, -0.8487322], [9.5939778, -5.1975952]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "black", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 2.89791}
+            ).addTo(map_f88e6631f5f9c61ea941da7def205fec);
+        
+    
+            poly_line_ad3a7c67787aa0824a19c07feb40f84d.bindTooltip(
+                `<div>
+                     Population: 289791
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_594d1d96baa3bd6abd721926871e866d = L.polyline(
+                [[9.5939778, -5.1975952], [9.541111, 0.7876018299289109]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "black", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 2.89791}
+            ).addTo(map_f88e6631f5f9c61ea941da7def205fec);
+        
+    
+            poly_line_594d1d96baa3bd6abd721926871e866d.bindTooltip(
+                `<div>
+                     Population: 289791
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_61ee4d264d5ff94bdb5900d253433004 = L.polyline(
+                [[9.541111, 0.7876018299289109], [4.714764, -6.68286]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "black", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 8.94563}
+            ).addTo(map_f88e6631f5f9c61ea941da7def205fec);
+        
+    
+            poly_line_61ee4d264d5ff94bdb5900d253433004.bindTooltip(
+                `<div>
+                     Population: 894563
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_d9086625d2e62717ee3d6a8062ec12eb = L.polyline(
+                [[4.714764, -6.68286], [9.9326083, 5.6511088]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "black", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 7.17546}
+            ).addTo(map_f88e6631f5f9c61ea941da7def205fec);
+        
+    
+            poly_line_d9086625d2e62717ee3d6a8062ec12eb.bindTooltip(
+                `<div>
+                     Population: 717546
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_0d2a89b7e617fc867e4668fea2ad25de = L.polyline(
+                [[9.4574719, -5.6342471], [9.5939778, -5.1975952]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "black", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 2.08196}
+            ).addTo(map_f88e6631f5f9c61ea941da7def205fec);
+        
+    
+            poly_line_0d2a89b7e617fc867e4668fea2ad25de.bindTooltip(
+                `<div>
+                     Population: 208196
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_70f80ffbc01df3d8ff67963238c9181d = L.polyline(
+                [[9.4574719, -5.6342471], [5.320357, -4.016107]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "black", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 2.08196}
+            ).addTo(map_f88e6631f5f9c61ea941da7def205fec);
+        
+    
+            poly_line_70f80ffbc01df3d8ff67963238c9181d.bindTooltip(
+                `<div>
+                     Population: 208196
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_1601ba5277c9c14826d9e99d4ba42b0d = L.polyline(
+                [[5.320357, -4.016107], [6.8766904, -6.4516096]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "black", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 3.89087}
+            ).addTo(map_f88e6631f5f9c61ea941da7def205fec);
+        
+    
+            poly_line_1601ba5277c9c14826d9e99d4ba42b0d.bindTooltip(
+                `<div>
+                     Population: 389087
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_1334150d783cd0bda79749c7c57e7130 = L.polyline(
+                [[6.8766904, -6.4516096], [7.165446, 1.9828803672675925]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "black", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 1.65025}
+            ).addTo(map_f88e6631f5f9c61ea941da7def205fec);
+        
+    
+            poly_line_1334150d783cd0bda79749c7c57e7130.bindTooltip(
+                `<div>
+                     Population: 165025
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_914a8125c4401667227c1ff72ba4138d = L.polyline(
+                [[7.165446, 1.9828803672675925], [7.3777462, 3.8972497]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "black", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 1.65025}
+            ).addTo(map_f88e6631f5f9c61ea941da7def205fec);
+        
+    
+            poly_line_914a8125c4401667227c1ff72ba4138d.bindTooltip(
+                `<div>
+                     Population: 165025
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_d6187db67e2e8e6dd4b491f9884dcf59 = L.polyline(
+                [[7.3777462, 3.8972497], [6.6985605, -1.6233086]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "black", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 2.56711}
+            ).addTo(map_f88e6631f5f9c61ea941da7def205fec);
+        
+    
+            poly_line_d6187db67e2e8e6dd4b491f9884dcf59.bindTooltip(
+                `<div>
+                     Population: 256711
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_21d041cd7aaf72c63f63a332e3c0fc10 = L.polyline(
+                [[14.7948093, -16.9529272], [6.4550575, 3.3941795]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "black", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 1.0134}
+            ).addTo(map_f88e6631f5f9c61ea941da7def205fec);
+        
+    
+            poly_line_21d041cd7aaf72c63f63a332e3c0fc10.bindTooltip(
+                `<div>
+                     Population: 101340
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_7be55b90ae01431cc891d6f66617239a = L.polyline(
+                [[6.4550575, 3.3941795], [5.5571096, -0.2012376]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "black", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 1.0134}
+            ).addTo(map_f88e6631f5f9c61ea941da7def205fec);
+        
+    
+            poly_line_7be55b90ae01431cc891d6f66617239a.bindTooltip(
+                `<div>
+                     Population: 101340
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_9e81a522ce53f34ad52cd0dabf3552fd = L.polyline(
+                [[5.5571096, -0.2012376], [4.7581592, -6.641549]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "black", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 5.50139}
+            ).addTo(map_f88e6631f5f9c61ea941da7def205fec);
+        
+    
+            poly_line_9e81a522ce53f34ad52cd0dabf3552fd.bindTooltip(
+                `<div>
+                     Population: 550139
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_5c7900c57c359cd222660f0598e3d710 = L.circleMarker(
+                [6.4550575, 3.3941795],
+                {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_f88e6631f5f9c61ea941da7def205fec);
+        
+    
+            circle_marker_5c7900c57c359cd222660f0598e3d710.bindTooltip(
+                `<div>
+                     Population: 118201
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_ad24185bb449d8badad5cb50c1fbbeda = L.marker(
+                [6.4550575, 3.3941795],
+                {}
+            ).addTo(map_f88e6631f5f9c61ea941da7def205fec);
+        
+    
+            marker_ad24185bb449d8badad5cb50c1fbbeda.bindTooltip(
+                `<div>
+                     Lagos, Nigeria
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_4cb779a25a4cb6bc802a2ef6051f1e5b = L.circleMarker(
+                [11.8948389, 8.5364136],
+                {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_f88e6631f5f9c61ea941da7def205fec);
+        
+    
+            circle_marker_4cb779a25a4cb6bc802a2ef6051f1e5b.bindTooltip(
+                `<div>
+                     Population: 224159
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_b6c2cbd6659d3f396e0cfd2ffca38362 = L.marker(
+                [11.8948389, 8.5364136],
+                {}
+            ).addTo(map_f88e6631f5f9c61ea941da7def205fec);
+        
+    
+            marker_b6c2cbd6659d3f396e0cfd2ffca38362.bindTooltip(
+                `<div>
+                     Kano, Nigeria
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_934c301fba4e437b1995751f0f325c7c = L.circleMarker(
+                [13.8001844, -10.22455481493909],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_f88e6631f5f9c61ea941da7def205fec);
+        
+    
+            circle_marker_934c301fba4e437b1995751f0f325c7c.bindTooltip(
+                `<div>
+                     Population: 737736
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_930effcec90d210d2d96d2df899320f2 = L.marker(
+                [13.8001844, -10.22455481493909],
+                {}
+            ).addTo(map_f88e6631f5f9c61ea941da7def205fec);
+        
+    
+            marker_930effcec90d210d2d96d2df899320f2.bindTooltip(
+                `<div>
+                     Kayes, Mali
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_302c8ad85243c8d9db92cd6f456c4603 = L.circleMarker(
+                [12.3681873, -1.5270944],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_f88e6631f5f9c61ea941da7def205fec);
+        
+    
+            circle_marker_302c8ad85243c8d9db92cd6f456c4603.bindTooltip(
+                `<div>
+                     Population: 808063
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_fb8d0743b2830956998f2dc58ddc0745 = L.marker(
+                [12.3681873, -1.5270944],
+                {}
+            ).addTo(map_f88e6631f5f9c61ea941da7def205fec);
+        
+    
+            marker_fb8d0743b2830956998f2dc58ddc0745.bindTooltip(
+                `<div>
+                     Ouagadougou, Burkina Faso
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_a4fc6b48988febbf0ce0d520276b04df = L.circleMarker(
+                [13.524834, 2.109823],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_f88e6631f5f9c61ea941da7def205fec);
+        
+    
+            circle_marker_a4fc6b48988febbf0ce0d520276b04df.bindTooltip(
+                `<div>
+                     Population: 633690
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_1e224ad7f9ce42c02c981abd4442e106 = L.marker(
+                [13.524834, 2.109823],
+                {}
+            ).addTo(map_f88e6631f5f9c61ea941da7def205fec);
+        
+    
+            marker_1e224ad7f9ce42c02c981abd4442e106.bindTooltip(
+                `<div>
+                     Niamey, Niger
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_ca0638cd91a56e5275f4505cc97d0436 = L.circleMarker(
+                [12.61326555, -7.984739136241295],
+                {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_f88e6631f5f9c61ea941da7def205fec);
+        
+    
+            circle_marker_ca0638cd91a56e5275f4505cc97d0436.bindTooltip(
+                `<div>
+                     Population: 225659
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_d9c78475b1427de04f6e58d8904f4c00 = L.marker(
+                [12.61326555, -7.984739136241295],
+                {}
+            ).addTo(map_f88e6631f5f9c61ea941da7def205fec);
+        
+    
+            marker_d9c78475b1427de04f6e58d8904f4c00.bindTooltip(
+                `<div>
+                     Bamako, Mali
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_c84df465ac686caf11f093f8ceba16a7 = L.circleMarker(
+                [6.8200066, -5.2776034],
+                {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_f88e6631f5f9c61ea941da7def205fec);
+        
+    
+            circle_marker_c84df465ac686caf11f093f8ceba16a7.bindTooltip(
+                `<div>
+                     Population: 276083
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_670858c2724e68f4fb5713e50dfb7914 = L.marker(
+                [6.8200066, -5.2776034],
+                {}
+            ).addTo(map_f88e6631f5f9c61ea941da7def205fec);
+        
+    
+            marker_670858c2724e68f4fb5713e50dfb7914.bindTooltip(
+                `<div>
+                     Yamoussoukro, Côte d'Ivoire
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_b8d8e05142d97d548d727e36e317fb6d = L.circleMarker(
+                [12.885677300000001, -12.286363169419786],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_f88e6631f5f9c61ea941da7def205fec);
+        
+    
+            circle_marker_b8d8e05142d97d548d727e36e317fb6d.bindTooltip(
+                `<div>
+                     Population: 538082
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_0a1a3475a70dfea0edcf32649d10a900 = L.marker(
+                [12.885677300000001, -12.286363169419786],
+                {}
+            ).addTo(map_f88e6631f5f9c61ea941da7def205fec);
+        
+    
+            marker_0a1a3475a70dfea0edcf32649d10a900.bindTooltip(
+                `<div>
+                     Kédougou, Senegal
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_d900219e6da6fe61dae8e1fb361d7db4 = L.circleMarker(
+                [12.0755231, -12.2956935],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_f88e6631f5f9c61ea941da7def205fec);
+        
+    
+            circle_marker_d900219e6da6fe61dae8e1fb361d7db4.bindTooltip(
+                `<div>
+                     Population: 748478
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_dd48cfd423170250bfea1b03a8f4ac02 = L.marker(
+                [12.0755231, -12.2956935],
+                {}
+            ).addTo(map_f88e6631f5f9c61ea941da7def205fec);
+        
+    
+            marker_dd48cfd423170250bfea1b03a8f4ac02.bindTooltip(
+                `<div>
+                     Mali, Guinea
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_d11739275cf8c08f2c87d04be5ced8f7 = L.circleMarker(
+                [11.482629, -6.860785462633452],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_f88e6631f5f9c61ea941da7def205fec);
+        
+    
+            circle_marker_d11739275cf8c08f2c87d04be5ced8f7.bindTooltip(
+                `<div>
+                     Population: 872370
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_da3394133d4b804b5813c6a7dc0aea1e = L.marker(
+                [11.482629, -6.860785462633452],
+                {}
+            ).addTo(map_f88e6631f5f9c61ea941da7def205fec);
+        
+    
+            marker_da3394133d4b804b5813c6a7dc0aea1e.bindTooltip(
+                `<div>
+                     Sikasso, Mali
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_ece11bbbb1c00c749d4dcdd65b4f0e78 = L.circleMarker(
+                [11.1757783, -4.2957591],
+                {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_f88e6631f5f9c61ea941da7def205fec);
+        
+    
+            circle_marker_ece11bbbb1c00c749d4dcdd65b4f0e78.bindTooltip(
+                `<div>
+                     Population: 339275
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_ec788d83145e965b7952f17fd4e58198 = L.marker(
+                [11.1757783, -4.2957591],
+                {}
+            ).addTo(map_f88e6631f5f9c61ea941da7def205fec);
+        
+    
+            marker_ec788d83145e965b7952f17fd4e58198.bindTooltip(
+                `<div>
+                     Bobo-Dioulasso, Burkina Faso
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_b45513c033ce0b3bbb80b263db5bdc34 = L.circleMarker(
+                [12.96030725, -2.260133043665028],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_f88e6631f5f9c61ea941da7def205fec);
+        
+    
+            circle_marker_b45513c033ce0b3bbb80b263db5bdc34.bindTooltip(
+                `<div>
+                     Population: 904412
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_b89655ee245c438ee34685f296f6cdda = L.marker(
+                [12.96030725, -2.260133043665028],
+                {}
+            ).addTo(map_f88e6631f5f9c61ea941da7def205fec);
+        
+    
+            marker_b89655ee245c438ee34685f296f6cdda.bindTooltip(
+                `<div>
+                     Zone du Nord, Burkina Faso
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_3732a6f83f3311ababfe91eea14ef3b3 = L.circleMarker(
+                [10.642703, -4.752639],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_f88e6631f5f9c61ea941da7def205fec);
+        
+    
+            circle_marker_3732a6f83f3311ababfe91eea14ef3b3.bindTooltip(
+                `<div>
+                     Population: 542157
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_f257fb2ad6a050a5fd1819f57f83ab86 = L.marker(
+                [10.642703, -4.752639],
+                {}
+            ).addTo(map_f88e6631f5f9c61ea941da7def205fec);
+        
+    
+            marker_f257fb2ad6a050a5fd1819f57f83ab86.bindTooltip(
+                `<div>
+                     Banfora, Burkina Faso
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_b4630a9d5d6b5f83b7495fa153cd0872 = L.circleMarker(
+                [10.7853963, -0.8487322],
+                {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_f88e6631f5f9c61ea941da7def205fec);
+        
+    
+            circle_marker_b4630a9d5d6b5f83b7495fa153cd0872.bindTooltip(
+                `<div>
+                     Population: 224863
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_aaa2358e909c2791b830fcaf5a6d6827 = L.marker(
+                [10.7853963, -0.8487322],
+                {}
+            ).addTo(map_f88e6631f5f9c61ea941da7def205fec);
+        
+    
+            marker_aaa2358e909c2791b830fcaf5a6d6827.bindTooltip(
+                `<div>
+                     Bolgatanga, Ghana
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_2ce45bec47a2a7aa72e2725ed4a7cab2 = L.circleMarker(
+                [13.9051631, -4.5548581],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_f88e6631f5f9c61ea941da7def205fec);
+        
+    
+            circle_marker_2ce45bec47a2a7aa72e2725ed4a7cab2.bindTooltip(
+                `<div>
+                     Population: 546655
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_91a1dcdad029c32596be4e1d885d9566 = L.marker(
+                [13.9051631, -4.5548581],
+                {}
+            ).addTo(map_f88e6631f5f9c61ea941da7def205fec);
+        
+    
+            marker_91a1dcdad029c32596be4e1d885d9566.bindTooltip(
+                `<div>
+                     Djenné, Mali
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_a7f1353965405e11691db5e164924976 = L.circleMarker(
+                [10.6248355, -9.3175166],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_f88e6631f5f9c61ea941da7def205fec);
+        
+    
+            circle_marker_a7f1353965405e11691db5e164924976.bindTooltip(
+                `<div>
+                     Population: 820411
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_6e254bbb212023f756102c370cf94450 = L.marker(
+                [10.6248355, -9.3175166],
+                {}
+            ).addTo(map_f88e6631f5f9c61ea941da7def205fec);
+        
+    
+            marker_6e254bbb212023f756102c370cf94450.bindTooltip(
+                `<div>
+                     Kankan, Guinea
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_be06ea9689c8b47488a560d7642cad76 = L.circleMarker(
+                [9.5939778, -5.1975952],
+                {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_f88e6631f5f9c61ea941da7def205fec);
+        
+    
+            circle_marker_be06ea9689c8b47488a560d7642cad76.bindTooltip(
+                `<div>
+                     Population: 381940
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_a24f32da880fb57ca1687c9103396183 = L.marker(
+                [9.5939778, -5.1975952],
+                {}
+            ).addTo(map_f88e6631f5f9c61ea941da7def205fec);
+        
+    
+            marker_a24f32da880fb57ca1687c9103396183.bindTooltip(
+                `<div>
+                     Ferkessédougou, Côte d'Ivoire
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_eb595e88787ead477dd831257a8769d0 = L.circleMarker(
+                [9.541111, 0.7876018299289109],
+                {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_f88e6631f5f9c61ea941da7def205fec);
+        
+    
+            circle_marker_eb595e88787ead477dd831257a8769d0.bindTooltip(
+                `<div>
+                     Population: 487285
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_c58aa1ab495da3e769559ae025e64cf1 = L.marker(
+                [9.541111, 0.7876018299289109],
+                {}
+            ).addTo(map_f88e6631f5f9c61ea941da7def205fec);
+        
+    
+            marker_c58aa1ab495da3e769559ae025e64cf1.bindTooltip(
+                `<div>
+                     Kara, Togo
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_ead943279580b71fdae6b39764b0f4a3 = L.circleMarker(
+                [4.714764, -6.68286],
+                {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_f88e6631f5f9c61ea941da7def205fec);
+        
+    
+            circle_marker_ead943279580b71fdae6b39764b0f4a3.bindTooltip(
+                `<div>
+                     Population: 311680
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_ec5267528701fb1909f3b8f1c38ac661 = L.marker(
+                [4.714764, -6.68286],
+                {}
+            ).addTo(map_f88e6631f5f9c61ea941da7def205fec);
+        
+    
+            marker_ec5267528701fb1909f3b8f1c38ac661.bindTooltip(
+                `<div>
+                     Krou, Côte d'Ivoire
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_372e7b7087972577de59954ada706774 = L.circleMarker(
+                [9.9326083, 5.6511088],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_f88e6631f5f9c61ea941da7def205fec);
+        
+    
+            circle_marker_372e7b7087972577de59954ada706774.bindTooltip(
+                `<div>
+                     Population: 585138
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_16566af409768896948317fbe9b91b2f = L.marker(
+                [9.9326083, 5.6511088],
+                {}
+            ).addTo(map_f88e6631f5f9c61ea941da7def205fec);
+        
+    
+            marker_16566af409768896948317fbe9b91b2f.bindTooltip(
+                `<div>
+                     Niger, Nigeria
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_7deb1e5f1defe18acdb2ef6e32fbea66 = L.circleMarker(
+                [9.4574719, -5.6342471],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_f88e6631f5f9c61ea941da7def205fec);
+        
+    
+            circle_marker_7deb1e5f1defe18acdb2ef6e32fbea66.bindTooltip(
+                `<div>
+                     Population: 961438
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_b6c79b82b2ad4dd5ce7932924b535754 = L.marker(
+                [9.4574719, -5.6342471],
+                {}
+            ).addTo(map_f88e6631f5f9c61ea941da7def205fec);
+        
+    
+            marker_b6c79b82b2ad4dd5ce7932924b535754.bindTooltip(
+                `<div>
+                     Korhogo, Côte d'Ivoire
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_9567762480107f3929f4794b438ba0e5 = L.circleMarker(
+                [5.320357, -4.016107],
+                {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_f88e6631f5f9c61ea941da7def205fec);
+        
+    
+            circle_marker_9567762480107f3929f4794b438ba0e5.bindTooltip(
+                `<div>
+                     Population: 430436
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_b0b43c0ac41c09f1f3ce371d340a765e = L.marker(
+                [5.320357, -4.016107],
+                {}
+            ).addTo(map_f88e6631f5f9c61ea941da7def205fec);
+        
+    
+            marker_b0b43c0ac41c09f1f3ce371d340a765e.bindTooltip(
+                `<div>
+                     Abidjan, Côte d'Ivoire
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_282a3b3668d976d0774dc63c9714c350 = L.circleMarker(
+                [6.8766904, -6.4516096],
+                {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_f88e6631f5f9c61ea941da7def205fec);
+        
+    
+            circle_marker_282a3b3668d976d0774dc63c9714c350.bindTooltip(
+                `<div>
+                     Population: 125844
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_f59b945bb44b9a0943489c6e1e7f174c = L.marker(
+                [6.8766904, -6.4516096],
+                {}
+            ).addTo(map_f88e6631f5f9c61ea941da7def205fec);
+        
+    
+            marker_f59b945bb44b9a0943489c6e1e7f174c.bindTooltip(
+                `<div>
+                     Daloa, Côte d'Ivoire
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_350ac8ef69abe3877eb6aff191db5f29 = L.circleMarker(
+                [7.165446, 1.9828803672675925],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_f88e6631f5f9c61ea941da7def205fec);
+        
+    
+            circle_marker_350ac8ef69abe3877eb6aff191db5f29.bindTooltip(
+                `<div>
+                     Population: 752469
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_6f2bf8c1cae99406966f2bf4be06e0e9 = L.marker(
+                [7.165446, 1.9828803672675925],
+                {}
+            ).addTo(map_f88e6631f5f9c61ea941da7def205fec);
+        
+    
+            marker_6f2bf8c1cae99406966f2bf4be06e0e9.bindTooltip(
+                `<div>
+                     Abomey, Benin
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_5a0fcdf23db3af9bb70a551dfe816f95 = L.circleMarker(
+                [7.3777462, 3.8972497],
+                {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_f88e6631f5f9c61ea941da7def205fec);
+        
+    
+            circle_marker_5a0fcdf23db3af9bb70a551dfe816f95.bindTooltip(
+                `<div>
+                     Population: 213627
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_7f110e0e10d05bc029eae3cde1267d48 = L.marker(
+                [7.3777462, 3.8972497],
+                {}
+            ).addTo(map_f88e6631f5f9c61ea941da7def205fec);
+        
+    
+            marker_7f110e0e10d05bc029eae3cde1267d48.bindTooltip(
+                `<div>
+                     Ibadan, Nigeria
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_a84ec30ad62f7171befee521cb1d8557 = L.circleMarker(
+                [6.6985605, -1.6233086],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_f88e6631f5f9c61ea941da7def205fec);
+        
+    
+            circle_marker_a84ec30ad62f7171befee521cb1d8557.bindTooltip(
+                `<div>
+                     Population: 676939
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_650fbbb00ce373bc92d5545c99236823 = L.marker(
+                [6.6985605, -1.6233086],
+                {}
+            ).addTo(map_f88e6631f5f9c61ea941da7def205fec);
+        
+    
+            marker_650fbbb00ce373bc92d5545c99236823.bindTooltip(
+                `<div>
+                     Kumasi, Ghana
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_86a62c470958f9a57c46b2eb5a2a01d7 = L.circleMarker(
+                [14.7948093, -16.9529272],
+                {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_f88e6631f5f9c61ea941da7def205fec);
+        
+    
+            circle_marker_86a62c470958f9a57c46b2eb5a2a01d7.bindTooltip(
+                `<div>
+                     Population: 244521
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_bc4237fae4b499560a0f987f10ef8466 = L.marker(
+                [14.7948093, -16.9529272],
+                {}
+            ).addTo(map_f88e6631f5f9c61ea941da7def205fec);
+        
+    
+            marker_bc4237fae4b499560a0f987f10ef8466.bindTooltip(
+                `<div>
+                     Thies, Senegal
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_de9312a44ce84943d484c94a96b7ec95 = L.circleMarker(
+                [5.5571096, -0.2012376],
+                {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_f88e6631f5f9c61ea941da7def205fec);
+        
+    
+            circle_marker_de9312a44ce84943d484c94a96b7ec95.bindTooltip(
+                `<div>
+                     Population: 147632
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_4a37dce661244dbe4f4fbfc9f9186761 = L.marker(
+                [5.5571096, -0.2012376],
+                {}
+            ).addTo(map_f88e6631f5f9c61ea941da7def205fec);
+        
+    
+            marker_4a37dce661244dbe4f4fbfc9f9186761.bindTooltip(
+                `<div>
+                     Accra, Ghana
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_d0f75f0c28cbf2bb7e31552f4d70c6df = L.circleMarker(
+                [4.7581592, -6.641549],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_f88e6631f5f9c61ea941da7def205fec);
+        
+    
+            circle_marker_d0f75f0c28cbf2bb7e31552f4d70c6df.bindTooltip(
+                `<div>
+                     Population: 695533
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_cab754480b38904336406d1d4fc1727e = L.marker(
+                [4.7581592, -6.641549],
+                {}
+            ).addTo(map_f88e6631f5f9c61ea941da7def205fec);
+        
+    
+            marker_cab754480b38904336406d1d4fc1727e.bindTooltip(
+                `<div>
+                     San-Pédro, Côte d'Ivoire
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            map_f88e6631f5f9c61ea941da7def205fec.fitBounds(
+                [[4.714764, -16.9529272], [14.7948093, 8.5364136]],
+                {}
+            );
+        
+</script>
+</html>
